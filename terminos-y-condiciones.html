@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms and Conditions — FlickMatch</title>
+<meta name="description" content="The terms that apply when you use FlickMatch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f3f8;
+    --card: #ffffff;
+    --ink: #1a1b35;
+    --muted: #55566e;
+    --line: #d9d8e6;
+    --accent: #c2255c;
+    --accent-ink: #ffffff;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Figtree", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #12121f;
+      --card: #1c1c2e;
+      --ink: #ececf6;
+      --muted: #a3a4be;
+      --line: #33334d;
+      --accent: #ff6b9a;
+      --accent-ink: #12121f;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+
+  /* Ticket-stub header */
+  .ticket {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px 28px 40px;
+    margin-bottom: 40px;
+  }
+  .ticket::after {
+    content: "";
+    position: absolute;
+    left: 20px; right: 20px; bottom: 16px;
+    border-top: 2px dashed var(--line);
+  }
+  .ticket::before, .ticket .notch-r {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .ticket::before { left: -12px; }
+  .ticket .notch-r { right: -12px; }
+  .brand {
+    margin: 0 0 4px;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--accent);
+  }
+  h1 {
+    margin: 0 0 12px;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .lead { margin: 0; color: var(--muted); max-width: 52ch; }
+
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  h2 {
+    margin: 0 0 16px;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* FAQ */
+  details {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 16px 48px 16px 20px;
+    position: relative;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.35;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "";
+    position: absolute;
+    right: 20px; top: 50%;
+    width: 9px; height: 9px;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: translateY(-70%) rotate(45deg);
+  }
+  details[open] > summary::after { transform: translateY(-30%) rotate(-135deg); }
+  details[open] > summary { border-bottom: 1px solid var(--line); }
+  .answer { padding: 16px 20px 20px; }
+  .answer p { margin: 0 0 12px; max-width: 62ch; }
+  .answer p:last-child { margin-bottom: 0; }
+  .path {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.975rem;
+  }
+
+  /* Contact */
+  .contact {
+    margin-top: 40px;
+    padding: 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 16px;
+  }
+  .contact h2 { margin-bottom: 8px; }
+  .contact p { margin: 0 0 20px; max-width: 52ch; opacity: 0.85; }
+  .button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .button:hover { filter: brightness(1.08); }
+  .contact .button:focus-visible { outline-color: var(--paper); }
+  @media (prefers-color-scheme: dark) {
+    .contact { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+    .contact .button:focus-visible { outline-color: var(--accent); }
+  }
+
+  footer { margin-top: 28px; color: var(--muted); font-size: 0.9rem; }
+
+  @media (max-width: 480px) {
+    .ticket { padding: 28px 20px 40px; }
+    .contact { padding: 22px 20px; }
+  }
+
+  .doc h2 { margin: 36px 0 12px; font-size: 1.25rem; }
+  .doc p { margin: 0 0 12px; max-width: 62ch; }
+  .doc ul { margin: 0 0 12px; padding-left: 1.25rem; }
+  .doc li { margin-bottom: 8px; max-width: 62ch; }
+  .doc .intro { font-size: 1.125rem; }
+
+  /* Marcador de datos a completar: borrar antes de publicar */
+  .pendiente {
+    background: #ffe066;
+    color: #1a1b35;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="ticket">
+    <span class="notch-r" aria-hidden="true"></span>
+    <p class="brand">FlickMatch</p>
+    <h1>Terms and Conditions</h1>
+    <p class="lead">Last updated: September 30, 2026</p>
+  </header>
+
+  <article class="doc">
+    <p class="intro">Welcome to FlickMatch (“the App”, “we”, “us”). By downloading, accessing, or using FlickMatch, you accept these Terms and Conditions. If you do not agree, please do not use the App.</p>
+
+    <h2>1. Description of the service</h2>
+    <p>FlickMatch is an app that lets two people create a shared room, swipe on movies and TV shows, and find matches for what to watch together.</p>
+    <p>This product uses the TMDB API but is not endorsed or certified by TMDB. Movie and TV show information (titles, synopses, posters) comes from The Movie Database (TMDB) and belongs to its respective rights holders.</p>
+
+    <h2>2. Minimum age</h2>
+    <p>To use FlickMatch you must be at least 13 years old. If you are between 13 and 18, you need the permission of a parent or legal guardian.</p>
+
+    <h2>3. User accounts</h2>
+    <ul>
+      <li>You can create an account with email and password, Apple ID, or Google.</li>
+      <li>You are responsible for keeping your login credentials confidential.</li>
+      <li>We reserve the right to suspend or delete accounts that violate these Terms.</li>
+      <li>You can delete your account at any time from the Profile section of the App. This action is permanent and deletes your rooms, matches, and profile data.</li>
+    </ul>
+
+    <h2>4. FlickMatch Plus subscription</h2>
+    <ul>
+      <li>FlickMatch offers an optional subscription called “FlickMatch Plus” with additional benefits, such as a custom deck and higher swipe limits.</li>
+      <li>Prices: $4.99 USD per month or $49.99 USD per year (subject to change; final prices depend on your app store and region).</li>
+      <li>Payment is processed through your App Store (Apple) account.</li>
+      <li>Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.</li>
+      <li>You can manage or cancel your subscription from your Apple account settings (Settings &gt; [your name] &gt; Subscriptions).</li>
+      <li>We do not process refunds directly; refunds are governed by Apple's policies.</li>
+    </ul>
+
+    <h2>5. User conduct</h2>
+    <p>When using FlickMatch, you agree not to:</p>
+    <ul>
+      <li>Use the App for illegal or unauthorized purposes.</li>
+      <li>Send abusive or offensive content, or spam, through shared rooms.</li>
+      <li>Attempt to breach, hack, or interfere with the operation of the App or its servers.</li>
+      <li>Impersonate another person.</li>
+    </ul>
+
+    <h2>6. Intellectual property</h2>
+    <ul>
+      <li>The movie and TV show content (titles, images, synopses) is the property of TMDB and the corresponding studios and distributors.</li>
+      <li>The design, code, and brand of FlickMatch are the property of Jaqueline Morello.</li>
+    </ul>
+
+    <h2>7. Limitation of liability</h2>
+    <ul>
+      <li>FlickMatch is provided “as is”, with no guarantee of uninterrupted or error-free availability.</li>
+      <li>We are not responsible for decisions made based on the App's recommendations or results.</li>
+      <li>We do not guarantee the accuracy of the movie and TV show information obtained from TMDB.</li>
+    </ul>
+
+    <h2>8. Termination</h2>
+    <p>We may suspend or cancel your access to the App if you violate these Terms. You may stop using the App and delete your account at any time.</p>
+
+    <h2>9. Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. We will publish the updated version on this page with a new “Last updated” date. Continuing to use the App after a change means you accept the new Terms.</p>
+
+    <h2>10. Governing law</h2>
+    <p>These Terms are governed by the laws of Argentina, without regard to its conflict of laws provisions.</p>
+
+    <h2>11. Contact</h2>
+    <p>For questions about these Terms, email us at <a href="mailto:reactlyapp@gmail.com">reactlyapp@gmail.com</a>.</p>
+  </article>
+</main>
+</body>
+</html>
