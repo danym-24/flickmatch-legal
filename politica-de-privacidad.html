@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — FlickMatch</title>
+<meta name="description" content="What data FlickMatch collects, how we use it, and what rights you have over it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f3f8;
+    --card: #ffffff;
+    --ink: #1a1b35;
+    --muted: #55566e;
+    --line: #d9d8e6;
+    --accent: #c2255c;
+    --accent-ink: #ffffff;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Figtree", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #12121f;
+      --card: #1c1c2e;
+      --ink: #ececf6;
+      --muted: #a3a4be;
+      --line: #33334d;
+      --accent: #ff6b9a;
+      --accent-ink: #12121f;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+
+  /* Ticket-stub header */
+  .ticket {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px 28px 40px;
+    margin-bottom: 40px;
+  }
+  .ticket::after {
+    content: "";
+    position: absolute;
+    left: 20px; right: 20px; bottom: 16px;
+    border-top: 2px dashed var(--line);
+  }
+  .ticket::before, .ticket .notch-r {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .ticket::before { left: -12px; }
+  .ticket .notch-r { right: -12px; }
+  .brand {
+    margin: 0 0 4px;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--accent);
+  }
+  h1 {
+    margin: 0 0 12px;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .lead { margin: 0; color: var(--muted); max-width: 52ch; }
+
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  h2 {
+    margin: 0 0 16px;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* FAQ */
+  details {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 16px 48px 16px 20px;
+    position: relative;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.35;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "";
+    position: absolute;
+    right: 20px; top: 50%;
+    width: 9px; height: 9px;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: translateY(-70%) rotate(45deg);
+  }
+  details[open] > summary::after { transform: translateY(-30%) rotate(-135deg); }
+  details[open] > summary { border-bottom: 1px solid var(--line); }
+  .answer { padding: 16px 20px 20px; }
+  .answer p { margin: 0 0 12px; max-width: 62ch; }
+  .answer p:last-child { margin-bottom: 0; }
+  .path {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.975rem;
+  }
+
+  /* Contact */
+  .contact {
+    margin-top: 40px;
+    padding: 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 16px;
+  }
+  .contact h2 { margin-bottom: 8px; }
+  .contact p { margin: 0 0 20px; max-width: 52ch; opacity: 0.85; }
+  .button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .button:hover { filter: brightness(1.08); }
+  .contact .button:focus-visible { outline-color: var(--paper); }
+  @media (prefers-color-scheme: dark) {
+    .contact { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+    .contact .button:focus-visible { outline-color: var(--accent); }
+  }
+
+  footer { margin-top: 28px; color: var(--muted); font-size: 0.9rem; }
+
+  @media (max-width: 480px) {
+    .ticket { padding: 28px 20px 40px; }
+    .contact { padding: 22px 20px; }
+  }
+
+  .doc h2 { margin: 36px 0 12px; font-size: 1.25rem; }
+  .doc p { margin: 0 0 12px; max-width: 62ch; }
+  .doc ul { margin: 0 0 12px; padding-left: 1.25rem; }
+  .doc li { margin-bottom: 8px; max-width: 62ch; }
+  .doc .intro { font-size: 1.125rem; }
+
+  /* Marcador de datos a completar: borrar antes de publicar */
+  .pendiente {
+    background: #ffe066;
+    color: #1a1b35;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="ticket">
+    <span class="notch-r" aria-hidden="true"></span>
+    <p class="brand">FlickMatch</p>
+    <h1>Privacy Policy</h1>
+    <p class="lead">Last updated: September 30, 2026</p>
+  </header>
+
+  <article class="doc">
+    <p class="intro">This Privacy Policy explains what data FlickMatch (“the App”, “we”, “us”) collects, how we use it, and what rights you have over it.</p>
+
+    <h2>1. What data we collect</h2>
+    <ul>
+      <li><strong>Email address:</strong> if you sign up with email and password, Apple ID, or Google.</li>
+      <li><strong>User identifier (UID):</strong> generated by Firebase Authentication to identify your account.</li>
+      <li><strong>App usage data:</strong> swipes (like / dislike) on movies and TV shows, matches found, rooms you created or joined, and daily usage counters (number of swipes and rooms created per day) used to apply the free version's limits.</li>
+      <li><strong>Your device's preferred language and time zone:</strong> to show you the movie and TV catalog in your language and to calculate your daily limits based on your local day.</li>
+      <li><strong>Subscription status:</strong> whether you have FlickMatch Plus active or not.</li>
+      <li><strong>Advertising data (free version):</strong> device identifiers, IP address, and ad interaction data, collected by Google AdMob to show and measure ads.</li>
+    </ul>
+    <p>We do not collect your real name, profile photo, precise location (GPS), or your device's contacts. Please note that the third-party services we use (for example, Firebase and AdMob) may infer an approximate location from your IP address.</p>
+
+    <h2>2. How we collect this data</h2>
+    <ul>
+      <li>Through Firebase Authentication (Google) when you create an account or sign in.</li>
+      <li>Through Firebase Firestore (Google), where your rooms, swipes, and matches are stored.</li>
+      <li>Through Firebase Cloud Functions (Google), which process the logic for matches, limits, and account deletion.</li>
+      <li>Through RevenueCat and Apple, when you buy or restore a subscription.</li>
+      <li>Through Google AdMob, which shows the ads in the free version and collects device identifiers and usage data.</li>
+    </ul>
+
+    <h2>3. Who we share your data with (third parties)</h2>
+    <ul>
+      <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Functions, Hosting): our infrastructure and data processing provider. Hosting serves the link that is shared to join a room.</li>
+      <li><strong>The Movie Database (TMDB):</strong> we use its API to get movie and TV show information. We do not send your personal data (email, UID) to TMDB; we only make catalog queries (genre, language, title search).</li>
+      <li><strong>Sign in with Apple and Google Sign-In:</strong> if you choose these sign-in methods, they process your authentication under their own privacy policies.</li>
+      <li><strong>Apple App Store:</strong> processes payments for the FlickMatch Plus subscription. We do not have access to your payment data (card, billing); Apple manages it directly.</li>
+      <li><strong>RevenueCat:</strong> manages your subscription status and receives your user identifier (UID) and your purchase information to associate them with it.</li>
+      <li><strong>Google AdMob:</strong> shows ads to users of the free version. Google and its partners may use device identifiers and usage data to show and measure ads, and may use cookies or similar technologies. You can learn how Google uses data from partner sites and apps at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>.</li>
+    </ul>
+    <p>These providers may process your data in the United States and in other countries, each under its own safeguards and privacy policies.</p>
+    <p>We do not sell your personal data to third parties.</p>
+
+    <h2>4. Why we use your data</h2>
+    <ul>
+      <li>To let you create and join movie and TV show voting rooms.</li>
+      <li>To calculate and show your matches.</li>
+      <li>To apply usage limits based on your plan (Free or Plus).</li>
+      <li>To show you the catalog in your language.</li>
+      <li>To process your subscription, if you have one.</li>
+      <li>To show ads in the free version.</li>
+    </ul>
+
+    <h2>5. Data retention</h2>
+    <ul>
+      <li>Rooms, together with their movie decks and swipe records, are automatically deleted about 48 hours after they are created (automatic deletion through Firestore TTL).</li>
+      <li>The “winning” matches of a room are stored with an automatic expiration of 2 days and are automatically deleted shortly after they expire.</li>
+      <li>Automatic deletion runs in the background and can take up to about 24 hours after expiration.</li>
+      <li>Your account data (email, UID, and daily usage counters, such as swipes and rooms created) is kept while your account is active.</li>
+      <li>If you delete your account from the Profile section, your user document, the rooms you took part in, your saved matches, and your authentication account are deleted from our systems. This action cannot be undone.</li>
+      <li>Data held by Apple, RevenueCat, and Google (AdMob) is governed by their own policies. Deleting your account does not cancel your subscription: to cancel it, use the subscription settings of your Apple account.</li>
+    </ul>
+
+    <h2>6. Your rights</h2>
+    <p>You can, at any time:</p>
+    <ul>
+      <li>Access your data by contacting us by email. Access is free of charge and you can exercise it at intervals of no less than six months, unless you show a legitimate interest.</li>
+      <li>Delete your account and your data directly from the App (Profile &gt; Delete Account).</li>
+      <li>Request correction of incorrect data by writing to us.</li>
+    </ul>
+    <p>If you believe we have not honored your rights, you can file a complaint with the data protection authority of your country. In Argentina, this is the Agency for Access to Public Information (AAIP), the supervisory authority under Law 25,326, which handles complaints from people affected by violations of personal data protection rules.</p>
+
+    <h2>7. Children</h2>
+    <p>FlickMatch is not directed at children under 13 (or under the minimum age of digital consent in their country, if higher) and we do not knowingly collect data from children under that age. If you believe a child has given us personal data, contact us so we can delete it.</p>
+
+    <h2>8. Security</h2>
+    <p>We use Firebase Authentication, Firestore security rules, and encrypted connections (HTTPS) to protect your data. No system is 100% secure, but we take reasonable measures to protect your information.</p>
+
+    <h2>9. Changes to this Policy</h2>
+    <p>We may update this Policy from time to time. We will publish the updated version on this page with a new “Last updated” date.</p>
+
+    <h2>10. Contact</h2>
+    <p>Data controller: Jaqueline Morello, Argentina.</p>
+    <p>For privacy questions or to exercise your rights, email us at <a href="mailto:reactlyapp@gmail.com">reactlyapp@gmail.com</a>.</p>
+  </article>
+</main>
+</body>
+</html>
